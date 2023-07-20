@@ -8,10 +8,10 @@ Follow these steps to build in bash terminal windows:
 > git clone https://github.com/g8sqh/exifread.git
 OR
 Download the exif-py folder in this repo
-> cd exifread/
-> git switch -c develop origin/develop 
-> python -m pip install rdflib
-> python -m pip install .
+> cd exifread/  
+> git switch -c develop origin/develop   
+> python -m pip install rdflib  
+> python -m pip install .  
 
 # Step 2: Create one large csv for flight metadata in timeseries order 
 
