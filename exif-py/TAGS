@@ -1,0 +1,124 @@
+
+exifread/utils.py,237
+def ord_(9,83
+def make_string(15,168
+def make_string_uc(42,910
+def get_gps_coords(56,1436
+class Ratio(84,2346
+    def __new__(91,2547
+    def __repr__(100,2876
+    def num(104,2947
+    def den(108,3011
+    def decimal(111,3063
+
+exifread/__init__.py,162
+def _find_tiff_exif(21,454
+def _find_webp_exif(30,651
+def _find_png_exif(51,1554
+def _get_xmp(72,2148
+def _determine_type(99,3074
+def process_file(123,3883
+
+exifread/heic.py,785
+class WrongBox(21,754
+class BoxVersion(23,790
+class BadSize(25,828
+class Box:Box29,865
+    def __init__(53,1400
+    def __repr__(56,1461
+    def set_sizes(59,1533
+    def set_full(65,1759
+class HEICExifFinder:HEICExifFinder74,2019
+    def __init__(76,2042
+    def get(79,2129
+    def get16(92,2554
+    def get32(95,2634
+    def get64(98,2714
+    def get_int4x2(101,2794
+    def get_int(107,2955
+    def get_string(119,3281
+    def next_box(128,3497
+    def get_full(147,4099
+    def skip(150,4169
+    def expect_parse(153,4241
+    def get_parser(160,4445
+    def parse_box(170,4767
+    def _parse_ftyp(178,5002
+    def _parse_meta(187,5260
+    def _parse_infe(200,5691
+    def _parse_iinf(212,6108
+    def _parse_iloc(223,6468
+    def find_exif(260,7922
+
+exifread/classes.py,651
+class IfdTag:IfdTag12,254
+    def __init__(17,314
+    def __str__(33,958
+    def __repr__(36,1019
+class ExifHeader:ExifHeader54,1514
+    def __init__(59,1576
+    def s2n(72,2079
+    def n2b(108,3498
+    def _first_ifd(119,3824
+    def _next_ifd(123,3920
+    def list_ifd(131,4167
+    def _process_field(145,4557
+    def _process_field2(191,6578
+    def _process_tag(217,7768
+    def dump_ifd(292,11104
+    def extract_tiff_thumbnail(324,12240
+    def extract_jpeg_thumbnail(387,15000
+    def decode_maker_note(407,15931
+    def _canon_decode_tag(535,21870
+    def _canon_decode_camera_info(557,22702
+    def parse_xmp(599,24309
+
+exifread/jpeg.py,110
+def _increment_base(10,171
+def _get_initial_base(14,271
+def _get_base(35,1095
+def find_jpeg_exif(115,5216
+
+exifread/tags/makernote/nikon.py,18
+def ev_bias(5,49
+
+exifread/tags/makernote/canon.py,79
+def add_one(662,21461
+def subtract_one(666,21504
+def convert_temp(670,21552
+
+exifread/tags/makernote/olympus.py,23
+def special_mode(5,42
+
+exifread/exif_log.py,169
+def get_logger(18,181
+def setup_logger(23,292
+class Formatter(37,601
+    def __init__(42,692
+    def format(51,981
+class Handler(69,1675
+    def __init__(70,1713
+
+exifread/exceptions.py,48
+class InvalidExif(1,0
+class ExifNotFound(5,41
+
+EXIF.py,39
+def get_args(28,564
+def main(66,1883
+
+setup.py,0
+
+exifread/tags/exif.py,0
+
+exifread/tags/makernote/fujifilm.py,0
+
+exifread/tags/makernote/apple.py,0
+
+exifread/tags/makernote/dji.py,0
+
+exifread/tags/makernote/__init__.py,0
+
+exifread/tags/makernote/casio.py,0
+
+exifread/tags/__init__.py,0

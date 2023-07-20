@@ -1,0 +1,6 @@
+rdflib
+
+[dev]
+mypy==1.2.0
+pylint==2.14.4
+rdflib
