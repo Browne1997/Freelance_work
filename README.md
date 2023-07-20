@@ -1,5 +1,5 @@
 # Sol_work: Converting x,y pixel coords to GPS coords
-'>' indicates a line of code to run
+
 # Step 1: Building exif package for python locally
 
 Using bash terminal (a.k.a requires bash installation and python version => 3.8.10) build new version of exifread. This step was done as exifread standard package could not read maker notes in the image metadata required for extraction of X data to create initial algorithm to match flight metadata with image metadata.
