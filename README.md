@@ -1,6 +1,21 @@
 # Sol_work: Converting x,y pixel coords to GPS coords
 
-# Step 1: Building exif package for python locally
+# Step 1: Upload images to AWS server and upload to BIIGLE project folder
+This allows images to be uploaded to BIIGLE without requiring a BIIGLE paid account (as it doesn't require us to save our data with them).
+
+Login details for AWS account is:  
+  Root email: erinbrowne97@gmail.com  
+  Password: WolfFish23.  
+  
+IAM policy  
+  Access key: AKIAQSTZCHP4VM7ODWFA
+
+Login detail for BIIGLE account is:
+  Access to this has been sent via email. I would suggest setting up your own if you no longer want me to have access post-project.   
+
+Instructions to do this is in the BIIGLE presentation. Including, how to create label trees and create the x,y pixel coords of ALDFG (and annoations when required). It also explains how to extract the biigle.csv with the x,y coords to be converted to GPS coords using the image name as an identifier to the flight/image metadata (final step). 
+
+# Step 2: Building exif package for python locally
 
 Using bash terminal (a.k.a requires bash installation and python version => 3.8.10) build new version of exifread. This step was done as exifread standard package could not read maker notes in the image metadata required for extraction of X data to create initial algorithm to match flight metadata with image metadata.
 
@@ -13,13 +28,13 @@ Download the exif-py folder in this repo
 > python -m pip install rdflib  
 > python -m pip install .  
 
-# Step 2: Create one large csv for flight metadata in timeseries order 
+# Step 3: Create one large csv for flight metadata in timeseries order 
 
 Run csv_merge.py on local directory of flight metadata csv's - making sure to change filepath within the code to your relevant local directories (line 12 - ignore line 14). 
 > python (or python3 dependant on how you name it in the installtion) csv_merge.py
 This code is used in the algorithm built in pre-csv_build.py and the output should be big.csv
 
-# Step 3: Create pre-csv's required for doing the GPS conversions
+# Step 4: Create pre-csv's required for doing the GPS conversions
 
 The algorithm built is based on a sub-set of data -1.6GB provided (however code is appropriate to run over all data). The paths in line 48 and 49 will again need changed to local directory paths for these images and the big.csv generated from step 2.
 > python (or python3 dependant on how you name it in the installtion) csv_merge.py
@@ -28,6 +43,6 @@ The output will generate a csv called matched.csv - this is used as the pre-csv 
 
 Q- does the code print out image names that don't match so they can note the ones with error?
 
-# Step 4: Create post-csv's of converted GPS coords 
+# Step 5: Create post-csv's of converted GPS coords 
 
 
