@@ -37,7 +37,7 @@ This code is used in the algorithm built in pre-csv_build.py and the output shou
 # Step 4: Create pre-csv's required for doing the GPS conversions
 
 The algorithm built is based on a sub-set of data -1.6GB provided (however code is appropriate to run over all data). The paths in line 48 and 49 will again need changed to local directory paths for these images and the big.csv generated from step 2.
-> python (or python3 dependant on how you name it in the installtion) csv_merge.py
+> python (or python3 dependant on how you name it in the installtion) pre_csv_build.py
 
 The output will generate a csv called matched.csv - this is used as the pre-csv for the final code to generate GPS coords. The csv extracts all image names mapping them to their flight metadata as well as extracting GPS and bearing from image metadata. These are matched based on closest similarities on timestamps, lat/long, bearing, gimbal and flight positions in this order. The algorithm took this approach to best match images to the correct metadata whilst reducing errors as timestamps between camera, onboard GPS and ground station GPS caused data matching issues. Some images may not match but will be indicated -
 
