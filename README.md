@@ -20,9 +20,8 @@ Instructions to do this is in the BIIGLE presentation. Including, how to create 
 Using bash terminal (a.k.a requires bash installation and python version => 3.8.10) build new version of exifread. This step was done as exifread standard package could not read maker notes in the image metadata required for extraction of X data to create initial algorithm to match flight metadata with image metadata.
 
 Follow these steps to build in bash terminal window:
-> git clone https://github.com/g8sqh/exifread.git
-OR
-Download the exif-py folder in this repo
+> git clone https://github.com/g8sqh/exifread.git  
+(OR Download the exif-py folder in this repo)  
 > cd exifread/  
 > git switch -c develop origin/develop   
 > python -m pip install rdflib  
