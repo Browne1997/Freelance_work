@@ -30,7 +30,7 @@ Follow these steps to build in bash terminal window:
 # Step 3: Create one large csv for flight metadata in timeseries order 
 
 Run csv_merge.py on local directory of flight metadata csv's - making sure to change filepath within the code to your relevant local directories (line 12 - ignore line 14). 
-> python (or python3 dependant on how you name it in the installtion) csv_merge.py
+> python (or python3 dependant on how you name it in the installation) csv_merge.py
 This code is used in the algorithm built in pre-csv_build.py and the output should be big.csv
 
 # Step 4: Create pre-csv's required for doing the GPS conversions
