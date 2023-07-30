@@ -16,11 +16,11 @@ import pyproj
 '''-----------------------------'''
 # Using a for loop iterate over matched.csv and biggle.csv and apply following calculations
 try:
-    matched_images = M=pd.read_csv('/home/erin/Desktop/Free_Lance_Projects/Sol_GPS_coords/GPS_worktodate/CSVs-FlightLogs/matched.csv')  
-    img_pixcoords = I= pd.read_csv('/home/erin/Desktop/Free_Lance_Projects/Sol_GPS_coords/drone_data/pixelcoords_biigle/12495_csv_image_annotation_report/12495-aldfg-real-data.csv')
+    matched_images = M=pd.read_csv('/ADD/DIRECTORY/TO/matched.csv')  
+    img_pixcoords = I= pd.read_csv('/ADD/DIRECTORY/TO/BIIGLE/ANNOTATIONS/12495-aldfg-real-data.csv')
 except FileNotFoundError:
-    matched_images = M=pd.read_csv('/home/djch/Erin_B/Thai/CSVs-FlightLogs/matched.csv')  
-    img_pixcoords = I= pd.read_csv('/home/djch/Erin_B/Thai/12495-aldfg-real-data.csv')
+    matched_images = M=pd.read_csv('/IGNORE/matched.csv')  
+    img_pixcoords = I= pd.read_csv('/IGNORE/12495-aldfg-real-data.csv')
 
 matched_cols = matched_images.columns # list of columns
 print(matched_cols)
