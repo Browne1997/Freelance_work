@@ -47,6 +47,6 @@ The output will generate a csv called matched.csv - this is used as the pre-csv 
 
 ## Step 5: Create post-csv's of converted GPS coords 
 
-Direct conversions of R code to python.
+Direct conversions of R code to python. Output CSV of converted GPS coordinates is B.csv 
 
 > python (or python3 dependant on how you name it in the installtion) post_csv_build.py
