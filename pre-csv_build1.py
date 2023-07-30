@@ -59,11 +59,11 @@ def fill_in_from_exif(this_row, exif_dict):
         this_row[f"exif_{csv_key}"] = exif_dict[exif_key]
 
 try:
-    all_flights = Path(r"/home/erin/Desktop/Free_Lance_Projects/Sol_GPS_coords/drone_data/SolNets_flightdata/CSVs-FlightLogs/big.csv")
-    all_images = Path("/home/erin/Desktop/Free_Lance_Projects/Sol_GPS_coords/drone_data/Sol's Nets/").glob('*.JPG')
+    all_flights = Path(r"/ADD/DIRECTORY/HERE/TO/big.csv")
+    all_images = Path("/ADD/DIRECTORY/HERE/TO/IMAGES/Sol's Nets/").glob('*.JPG')
 except FileNotFoundError:
-    all_flights = Path(r"/home/djch/Erin_B/Thai/CSVs-FlightLogs/big.csv")
-    all_images = Path("/home/djch/Erin_B/Thai/Sol_s Nets").glob('*.JPG')
+    all_flights = Path(r"/IGNORE/IF/NOT/REQUIRED/big.csv")
+    all_images = Path("/IGNORE/IF/NOT/REQUIRED/Sol_s Nets").glob('*.JPG')
 
     
 # Function to turn GPS degree,mins,secs to decimal degrees
