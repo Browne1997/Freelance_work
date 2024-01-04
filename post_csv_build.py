@@ -16,8 +16,8 @@ import pyproj
 '''-----------------------------'''
 # Using a for loop iterate over matched.csv and biggle.csv and apply following calculations
 try:
-    matched_images = M=pd.read_csv('/ADD/DIRECTORY/TO/matched.csv')  
-    img_pixcoords = I= pd.read_csv('/ADD/DIRECTORY/TO/BIIGLE/ANNOTATIONS/12495-aldfg-real-data.csv')
+    matched_images = M=pd.read_csv('matched.csv')  
+    img_pixcoords = I= pd.read_csv('14223-kt-s.csv')
 except FileNotFoundError:
     matched_images = M=pd.read_csv('/IGNORE/matched.csv')  
     img_pixcoords = I= pd.read_csv('/IGNORE/12495-aldfg-real-data.csv')
@@ -40,7 +40,9 @@ for new_col, new_val in new_fields.items():
 #print(matched_images.columns)
 
 M = matched_images
-last_keys = None
+# Just in case thee first images don't match, this is the current set of keys
+last_keys = ['offset_x', 'offset_y', 'filename', 'GSD', 'dist', 'bear.deg', 'dist.km', 'True.Longitude', 'True.Latitude']
+keys_seen = False
 
 def process_1(x, M, geod):
     """x in the BIIGLE list of targets
@@ -48,7 +50,7 @@ def process_1(x, M, geod):
 
     return a new Series for computed values
     """
-    global last_keys
+    global last_keys, keys_seen
     
     our_image = O = M.loc[M['matched_image'] == x['filename']]
     #print(f"{our_image=}")
@@ -83,8 +85,12 @@ def process_1(x, M, geod):
 
     new_d['True.Longitude'], new_d['True.Latitude'] = float(LONG), float(LAT)
 
-    if last_keys is None:
+    if not keys_seen:
+        assert len(last_keys) == len(new_d.keys())
         last_keys = new_d.keys()
+        keys_seen = True
+        #print(f"last_keys is {len(last_keys)} \n{last_keys}")
+        
     return pd.Series(new_d.values(), index=new_d.keys())
 
 # B is a new DataFrame with just the new calculated stuff and the filename
