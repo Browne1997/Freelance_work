@@ -3,18 +3,6 @@
 ## Step 1: Upload images to AWS server and upload to BIIGLE project folder
 This allows images to be uploaded to BIIGLE without requiring a BIIGLE paid account (as it doesn't require us to save our data with them).
 
-Login details for AWS account is:  
-  Root email: erinbrowne97@gmail.com  
-  Password: WolfFish23.  
-  
-IAM policy  
-  Access key: AKIAQSTZCHP4VM7ODWFA
-
-Login detail for BIIGLE account is:  
-  Access to this has been sent via email. I would suggest setting up your own if you no longer want me to have access post-project.   
-  Root email: erinbrowne97@gmail.com  
-  Password: Harley1997.
-
 Instructions to do this is in the BIIGLE presentation. Including, how to create label trees and create the x,y pixel coords of ALDFG (and annoations when required). It also explains how to extract the biigle.csv with the x,y coords to be converted to GPS coords using the image name as an identifier to the flight/image metadata (final step). 
 
 ## Step 2: Building exif package for python locally
